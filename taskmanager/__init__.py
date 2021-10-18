@@ -10,6 +10,6 @@ app = Flask(__name__)
 app.config["SECRECT_KEY"] = os.environ.get("SECRECT_KEY")
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
 
-DB = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
 from taskmanager import routes
